@@ -1,0 +1,5 @@
+type Query {
+    hello: String!
+    getCharacters: [Character!]
+    getGames: [Game!]
+}
