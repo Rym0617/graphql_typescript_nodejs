@@ -1,5 +1,18 @@
 type Query {
-    hello: String!
-    getCharacters: [Character!]
-    getGames: [Game!]
+  getCharacters: [Character]
+  getCharacter(_id: ID!): Character
+  games: [Game!]
+  getDeveloper: [Developer]
+  getUsers: [User]
+  getPerson(id: ID!): Person
+  getPersons: [Person]
+}
+
+type Mutation {
+  createCharacter(character: NewCharacterInput): String
+  createGame(game: NewGameInput): Game
+  createDeveloper(developer: NewDeveloperInput): Developer
+  createUser(user: NewUserInput): User
+  updateCharacter(_id: ID!, character: EditCharacterInput): String
+  deleteCharacter(_id: ID!): String
 }

@@ -1,0 +1,8 @@
+type Developer {
+    _id: ID
+    name: String
+}
+
+input NewDeveloperInput{
+    name: String!
+}
